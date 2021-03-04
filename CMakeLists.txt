@@ -17,6 +17,8 @@ project(mbed-cmake-test-project LANGUAGES NONE)
 
 add_mbed_executable(hello_world HelloWorld.cpp)
 add_mbed_executable(test test.cpp pretty_printer.h)
+add_mbed_executable(connect connect.cpp pretty_printer.h)
+add_mbed_executable(connectable connectable.cpp pretty_printer.h)
 
 # build report
 # -------------------------------------------------------------

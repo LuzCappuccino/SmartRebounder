@@ -19,7 +19,7 @@
 #include "ble/Gap.h"
 #include "pretty_printer.h"
 
-const static char DEVICE_NAME[] = "BATTERY";
+const static char DEVICE_NAME[] = "LUZ";
 
 using namespace std::literals::chrono_literals;
 
@@ -66,7 +66,7 @@ private:
             /* you cannot connect to this device, you can only read its advertising data,
              * scannable means that the device has extra advertising data that the peer can receive if it
              * "scans" it which means it is using active scanning (it sends a scan request) */
-            ble::advertising_type_t::SCANNABLE_UNDIRECTED,
+            ble::advertising_type_t::CONNECTABLE_UNDIRECTED,
             ble::adv_interval_t(ble::millisecond_t(1000))
         );
 

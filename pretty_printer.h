@@ -85,7 +85,7 @@ inline void print_mac_address()
     ble::own_address_type_t addr_type;
     ble::address_t address;
     BLE::Instance().gap().getAddress(addr_type, address);
-    printf("DEVICE MAC ADDRESS: ");
+    printf("DEVICE MAC ADDRESS!: ");
     print_address(address);
 }
 

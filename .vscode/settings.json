@@ -1,3 +1,8 @@
 {
-    "cmake.configureSettings": { "MBED_PATH": "E:"}
+    "cmake.configureSettings": {
+        "UPLOAD_METHOD": "STM32CUBE"
+    },
+    "files.associations": {
+        "chrono": "cpp"
+    }
 }

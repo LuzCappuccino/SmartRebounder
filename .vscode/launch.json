@@ -1,0 +1,13 @@
+{
+    "configurations": [
+    {
+        "type": "gdb",
+        "request": "attach",
+        "name": "debug_connect",
+        "executable": "build/connect.elf",
+        "target": "localhost:23331",
+        "remote": true,
+        "cwd": "${workspaceRoot}", 
+        "gdbpath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2020-q4-major/bin/arm-none-eabi-gdb.exe"
+    }]
+}
