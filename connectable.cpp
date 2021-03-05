@@ -205,7 +205,7 @@ class Connectable : public ble::Gap::EventHandler
 
 /*Schedule processing of events from the BLE middleware in the event queue.*/
 void schedule_ble_events(BLE::OnEventsToProcessCallbackContext *context) {
-    event_queue.call(void schedule_ble_events(BLE::OnEventsToProcessCallbackContext *context));
+    event_queue.call(Callback<void()>(&context->ble, &BLE::processEvents));
 }
 
 int main() 
@@ -219,3 +219,11 @@ int main()
     
     return 0;
 }
+
+/* A couple of observations: 
+    - name observed via the bluetooth scanner said that the name was set to 
+    'legacy set LUZ'. Nice, didn't know that was the actual name
+    - on disconnect, the board no longer seems to advertise. Maybe stretch goal could be to 
+    restart advertising?
+    - next goal should be to faciliate some sort of data transfer 
+*/
