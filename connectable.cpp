@@ -140,6 +140,8 @@ class Connectable : public ble::Gap::EventHandler
             if(event.getReason() == ble::disconnection_reason_t::REMOTE_USER_TERMINATED_CONNECTION) {
                 printf("Remote user disconnected \r \n");
             }
+            printf("Restarting advertising...\n");
+            advertise();
         }
 
         /** Carrying over phy error handling from Gap demo **/
