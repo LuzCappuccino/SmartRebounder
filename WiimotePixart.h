@@ -16,7 +16,7 @@ private:
 
 	const uint8_t pixartI2CAddr = 0x58;
 
-	const int readDataLength = 16;
+	static const int readDataLength = 16;
 
 	const uint8_t levelParams[5][4] = {
 		{ 0x72, 0x20, 0x1F, 0x03},

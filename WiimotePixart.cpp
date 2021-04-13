@@ -37,7 +37,7 @@ std::array<std::pair<float, float>, PIXART_MAX_COORDS> WiimotePixart::readCoordi
 {
 	std::array<std::pair<float, float>, 4> coords;
 	writeCommand<2>({0xB0, 0x36});
-	char rawData[16];
+	char rawData[readDataLength];
 	readCommand(rawData);
 
 	char coord_0[3] = {rawData[1], rawData[2], rawData[3]};
