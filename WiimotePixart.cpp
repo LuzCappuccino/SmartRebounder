@@ -3,7 +3,7 @@
 //
 
 #include "WiimotePixart.h"
-
+#include <cinttypes>
 
 void WiimotePixart::begin()
 {
@@ -36,7 +36,7 @@ std::pair<float, float> unpackCoords(char* rawCoord) {
 std::array<std::pair<float, float>, PIXART_MAX_COORDS> WiimotePixart::readCoordinates()
 {
 	std::array<std::pair<float, float>, 4> coords;
-	writeCommand<2>({0xB0, 0x36});
+	writeCommand<1>({0x36});
 	char rawData[readDataLength];
 	readCommand(rawData);
 
