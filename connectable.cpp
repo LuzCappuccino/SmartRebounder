@@ -19,7 +19,7 @@ events::EventQueue event_queue;
 
 /* basic advertising parameters */
 static const ble::AdvertisingParameters advertising_params(
-    ble::advertising_type_t::CONNECTABLE_UNDIRECTED, /* type of connection */
+    ble::advertising_type_t::CONNECTABLE_UNDIRECTED, /* type of connection, not looking for any specific peer */
     ble::adv_interval_t(ble::millisecond_t(25)), /* min advertising interval */
     ble::adv_interval_t(ble::millisecond_t(50)) /* max advertising interval */
 );
@@ -89,7 +89,7 @@ class Connectable : public ble::Gap::EventHandler
             // using a helper class to help us build a valid payload
             ble::AdvertisingDataSimpleBuilder<ble::LEGACY_ADVERTISING_MAX_SIZE> data_builder;
             // you can chain builder method calls to create the payload 
-            data_builder.setFlags().setName("Legacy Set LUZ");
+            data_builder.setFlags().setName("ble_LUZ");
 
             // set advertising payload 
             error = _gap.setAdvertisingPayload(ble::LEGACY_ADVERTISING_HANDLE, data_builder.getAdvertisingData());
