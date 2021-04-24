@@ -19,5 +19,10 @@ static map<int, std::string> modeToString = {
 
 
 class ModeSwitchService {
-
+    public:
+        ModeSwitchService();
+        ~ModeSwitchService();
+    private:
+        RebounderModes _mode;
+        
 };
