@@ -1,3 +1,6 @@
 # command line build folder
 build*/
 cmake-build-*/
+
+# jupyter notebook shell files
+data_processing/jupyter_notebook/.ipynb_checkpoints*/

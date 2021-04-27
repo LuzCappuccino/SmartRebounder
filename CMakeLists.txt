@@ -22,11 +22,10 @@ set(SMART_REBOUNDER_SOURCES
 
 add_mbed_executable(test_pixart WiimotePixart.cpp WiimotePixart.h TestPixartSensor.cpp)
 
-add_mbed_executable(hello_world HelloWorld.cpp)
+add_mbed_executable(hello_world HelloWorld.cpp mbed-cmake/mbed-src/connectivity/FEATURE_BLE/include/ble/services/HeartRateService.h)
 add_mbed_executable(test test.cpp pretty_printer.h)
 add_mbed_executable(connect connect.cpp pretty_printer.h)
-add_mbed_executable(connectable connectable.cpp pretty_printer.h)
-
+add_mbed_executable(modeSwitch ModeSwitchService.cpp BleProcess.h pretty_printer.h)
 # build report
 # -------------------------------------------------------------
 
