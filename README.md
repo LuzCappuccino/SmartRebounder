@@ -1,2 +1,4 @@
-## mbed-cmake Example Project
-This project serves as an example for how to use mbed-cmake in a cmake project.  It contains the minimum extra files needed to include mbed-cmake, as well as a small hello world program that you can use to make sure your dev tool setup is working.  It's a good place to start your own projects off of!
+## Smart Rebounder
+This repository contains all the source code for running the Bluetooth fitness service on the STM32WB55 board, for building the companion iOS Bluetooth application, and for processing IR camera data in Python.
+
+This was a project completed while enrolled in USC's senior capstone class, EE459. Project members are Luz Camacho, Jamie Smith, and Prathik Rao. 
